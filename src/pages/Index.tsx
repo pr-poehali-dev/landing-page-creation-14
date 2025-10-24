@@ -399,7 +399,7 @@ const Index = () => {
               <a href="#" className="hover:text-white transition-colors">
                 <Icon name="Instagram" size={20} />
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="https://www.youtube.com/channel/UCKSXDzTY1zQ0xD3yE51Aiag" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 <Icon name="Youtube" size={20} />
               </a>
             </div>
