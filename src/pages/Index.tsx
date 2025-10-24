@@ -82,7 +82,7 @@ const Index = () => {
               alt="Cinematique Logo" 
               className="w-10 h-10 object-contain"
             />
-            <span className="font-display text-xl sm:text-3xl md:text-4xl font-bold text-[#E17B55] whitespace-nowrap">
+            <span className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-[#E17B55] whitespace-nowrap">
               Cinematique
             </span>
           </div>
