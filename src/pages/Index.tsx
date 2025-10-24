@@ -82,7 +82,7 @@ const Index = () => {
               alt="Cinematique Logo" 
               className="w-10 h-10 object-contain"
             />
-            <span className="font-display text-xl sm:text-4xl md:text-5xl font-bold text-[#FF6B35] whitespace-nowrap">
+            <span className="font-sans text-xl sm:text-4xl md:text-5xl font-bold text-[#FF6B35] whitespace-nowrap">
               Cinematique
             </span>
           </div>
@@ -143,7 +143,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 sm:space-y-8 animate-fade-in">
 
-              <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+              <h1 className="font-sans text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Пространство
                 <br />
                 <span className="bg-gradient-to-r from-orange via-orange-light to-gold bg-clip-text text-transparent">
@@ -204,7 +204,7 @@ const Index = () => {
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange to-gold flex items-center justify-center mb-4">
                   <Icon name={feature.icon as any} className="text-white" size={28} />
                 </div>
-                <h3 className="font-display text-base sm:text-xl font-bold mb-2">{feature.title}</h3>
+                <h3 className="font-sans text-base sm:text-xl font-bold mb-2">{feature.title}</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
               </Card>
             ))}
@@ -218,7 +218,7 @@ const Index = () => {
             <span className="px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-medium">
               ⭐ Отзывы
             </span>
-            <h2 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-4">
+            <h2 className="font-sans text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-4">
               Что говорят наши
               <br />
               <span className="bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
@@ -266,7 +266,7 @@ const Index = () => {
         <div className="mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
-              <h2 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="font-sans text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                 Присоединяйтесь
                 <br />
                 к творческому сообществу
@@ -307,7 +307,7 @@ const Index = () => {
             </div>
 
             <Card className="p-6 sm:p-8 bg-white animate-scale-in">
-              <h3 className="font-display text-lg sm:text-2xl font-bold mb-4 sm:mb-6 text-foreground">
+              <h3 className="font-sans text-lg sm:text-2xl font-bold mb-4 sm:mb-6 text-foreground">
                 Запись на мероприятие
               </h3>
               <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
@@ -376,7 +376,7 @@ const Index = () => {
                 alt="Cinematique Logo" 
                 className="w-10 h-10 object-contain"
               />
-              <span className="font-display text-sm sm:text-xl font-bold text-white whitespace-nowrap">Cinematique</span>
+              <span className="font-sans text-sm sm:text-xl font-bold text-white whitespace-nowrap">Cinematique</span>
             </div>
             <div className="text-center md:text-left">
               <p className="text-xs sm:text-sm">© 2024 Cinematique. Все права защищены.</p>
