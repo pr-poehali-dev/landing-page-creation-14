@@ -27,47 +27,47 @@ const Index = () => {
   const testimonials = [
     {
       name: "Анна Петрова",
-      role: "Маркетолог",
-      text: "Прошла курс по digital-маркетингу. Все структурировано и понятно, применяю знания на практике каждый день!",
+      role: "Танцовщица",
+      text: "Потрясающая атмосфера для творчества! Занятия танцами здесь изменили мою жизнь. Преподаватели - настоящие профессионалы!",
       rating: 5,
-      image: "https://cdn.poehali.dev/projects/a8ab8840-9005-4973-8d02-ada3c440d9fd/files/94a7f645-e1c0-4ca3-a04b-28360d7200ad.jpg"
+      image: "https://cdn.poehali.dev/projects/a8ab8840-9005-4973-8d02-ada3c440d9fd/files/942db71f-21a8-4fdb-bdac-f4aca78cf24b.jpg"
     },
     {
       name: "Михаил Соколов",
-      role: "Разработчик",
-      text: "Тренинг по управлению проектами изменил мой подход к работе. Рекомендую всем, кто хочет расти профессионально!",
+      role: "Музыкант",
+      text: "Нашел здесь единомышленников и вдохновение. Студия оборудована всем необходимым, а энергетика просто невероятная!",
       rating: 5,
-      image: "https://cdn.poehali.dev/projects/a8ab8840-9005-4973-8d02-ada3c440d9fd/files/94a7f645-e1c0-4ca3-a04b-28360d7200ad.jpg"
+      image: "https://cdn.poehali.dev/projects/a8ab8840-9005-4973-8d02-ada3c440d9fd/files/3a8ca910-28d3-494e-afa7-92218f48ed44.jpg"
     },
     {
       name: "Елена Иванова",
-      role: "HR-менеджер",
-      text: "Образовательная программа превзошла ожидания! Преподаватели - практики с реальным опытом.",
+      role: "Актриса",
+      text: "Мастер-классы по актерскому мастерству превзошли все ожидания. Раскрыла свой потенциал в полной мере!",
       rating: 5,
-      image: "https://cdn.poehali.dev/projects/a8ab8840-9005-4973-8d02-ada3c440d9fd/files/94a7f645-e1c0-4ca3-a04b-28360d7200ad.jpg"
+      image: "https://cdn.poehali.dev/projects/a8ab8840-9005-4973-8d02-ada3c440d9fd/files/942db71f-21a8-4fdb-bdac-f4aca78cf24b.jpg"
     }
   ];
 
   const features = [
     {
-      icon: "Lightbulb",
-      title: "Креативный подход",
-      description: "Нестандартные методики обучения для максимального усвоения материала"
+      icon: "Music",
+      title: "Танцы и музыка",
+      description: "Современные танцевальные направления и музыкальные занятия"
     },
     {
-      icon: "Users",
-      title: "Опытные наставники",
-      description: "Преподаватели-практики с реальным опытом работы в индустрии"
+      icon: "Film",
+      title: "Кино и актерство",
+      description: "Актерское мастерство, режиссура и киноискусство"
     },
     {
-      icon: "Award",
-      title: "Сертификаты",
-      description: "Документы государственного образца после завершения программы"
+      icon: "Mic",
+      title: "Ораторское мастерство",
+      description: "Развитие навыков публичных выступлений и коммуникации"
     },
     {
-      icon: "Clock",
-      title: "Гибкий график",
-      description: "Учитесь в удобное время, совмещая обучение с работой"
+      icon: "Sparkles",
+      title: "Духовное развитие",
+      description: "Практики медитации, йоги и личностного роста"
     }
   ];
 
@@ -77,10 +77,10 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-gold flex items-center justify-center">
-              <Icon name="GraduationCap" className="text-white" size={24} />
+              <Icon name="Sparkles" className="text-white" size={24} />
             </div>
             <span className="font-display text-2xl font-bold bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
-              EduSpace
+              ArtSpace Сочи
             </span>
           </div>
           <div className="hidden md:flex items-center gap-8">
@@ -88,7 +88,7 @@ const Index = () => {
             <a href="#reviews" className="text-sm hover:text-orange transition-colors">Отзывы</a>
             <a href="#contacts" className="text-sm hover:text-orange transition-colors">Контакты</a>
             <Button className="bg-gradient-to-r from-orange to-orange-light text-white">
-              Записаться
+              Забронировать
             </Button>
           </div>
         </div>
@@ -100,51 +100,51 @@ const Index = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="inline-block">
                 <span className="px-4 py-2 bg-orange/10 text-orange rounded-full text-sm font-medium">
-                  🚀 Инновационное образование
+                  ✨ Творческое пространство
                 </span>
               </div>
               <h1 className="font-display text-6xl lg:text-7xl font-bold leading-tight">
-                Образование
+                Пространство
                 <br />
                 <span className="bg-gradient-to-r from-orange via-orange-light to-gold bg-clip-text text-transparent">
-                  нового уровня
+                  для творчества
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Онлайн-курсы и тренинги от практикующих экспертов. 
-                Получите востребованные навыки и измените свою карьеру.
+                Танцы, музыка, кино, актерское и ораторское мастерство, духовное развитие. 
+                Откройте свой талант в сердце Сочи.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-gradient-to-r from-orange to-orange-light text-white hover:shadow-xl transition-all">
-                  Выбрать курс
+                  Забронировать место
                   <Icon name="ArrowRight" className="ml-2" size={20} />
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-orange text-orange hover:bg-orange hover:text-white">
-                  Узнать больше
+                  Расписание
                 </Button>
               </div>
               <div className="flex items-center gap-8 pt-8">
                 <div>
-                  <div className="font-display text-4xl font-bold text-orange">2500+</div>
-                  <div className="text-sm text-muted-foreground">Выпускников</div>
+                  <div className="font-display text-4xl font-bold text-orange">1200+</div>
+                  <div className="text-sm text-muted-foreground">Участников</div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
                 <div>
-                  <div className="font-display text-4xl font-bold text-orange">150+</div>
-                  <div className="text-sm text-muted-foreground">Курсов</div>
+                  <div className="font-display text-4xl font-bold text-orange">50+</div>
+                  <div className="text-sm text-muted-foreground">Мероприятий</div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
                 <div>
-                  <div className="font-display text-4xl font-bold text-orange">98%</div>
-                  <div className="text-sm text-muted-foreground">Довольных клиентов</div>
+                  <div className="font-display text-4xl font-bold text-orange">5</div>
+                  <div className="text-sm text-muted-foreground">Направлений</div>
                 </div>
               </div>
             </div>
             <div className="relative animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-br from-orange/20 to-gold/20 rounded-3xl blur-3xl"></div>
               <img 
-                src="https://cdn.poehali.dev/projects/a8ab8840-9005-4973-8d02-ada3c440d9fd/files/0bf4d133-b2ce-47ff-b19b-6b99bf943562.jpg"
-                alt="Education"
+                src="https://cdn.poehali.dev/projects/a8ab8840-9005-4973-8d02-ada3c440d9fd/files/869615ba-314c-42a6-b255-1bf19f1a9408.jpg"
+                alt="Creative Space"
                 className="relative rounded-3xl shadow-2xl w-full animate-float"
               />
             </div>
@@ -182,11 +182,11 @@ const Index = () => {
               Что говорят наши
               <br />
               <span className="bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
-                выпускники
+                участники
               </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Реальные истории успеха людей, которые изменили свою жизнь благодаря нашим программам
+              Истории людей, которые раскрыли свой творческий потенциал в ArtSpace
             </p>
           </div>
           
@@ -230,12 +230,12 @@ const Index = () => {
                 📬 Свяжитесь с нами
               </span>
               <h2 className="font-display text-5xl font-bold mt-6 mb-6">
-                Начните обучение
+                Присоединяйтесь
                 <br />
-                уже сегодня
+                к творческому сообществу
               </h2>
               <p className="text-xl text-white/80 mb-8">
-                Оставьте заявку, и наш менеджер свяжется с вами для консультации
+                Оставьте заявку на участие в мероприятиях или аренду пространства
               </p>
               
               <div className="space-y-6">
@@ -245,7 +245,7 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div className="text-white/70">info@eduspace.ru</div>
+                    <div className="text-white/70">info@artspace-sochi.ru</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -263,7 +263,7 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Адрес</div>
-                    <div className="text-white/70">Москва, ул. Примерная, 123</div>
+                    <div className="text-white/70">Сочи, Курортный проспект, 75</div>
                   </div>
                 </div>
               </div>
@@ -271,7 +271,7 @@ const Index = () => {
 
             <Card className="p-8 bg-white animate-scale-in">
               <h3 className="font-display text-2xl font-bold mb-6 text-foreground">
-                Форма заявки
+                Запись на мероприятие
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -309,7 +309,7 @@ const Index = () => {
                 <div>
                   <label className="block text-sm font-medium mb-2 text-foreground">Сообщение</label>
                   <Textarea 
-                    placeholder="Расскажите, какой курс вас интересует..."
+                    placeholder="Какое направление вас интересует: танцы, музыка, кино, актерство или духовное развитие?"
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     rows={4}
@@ -335,22 +335,22 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-gold flex items-center justify-center">
-                <Icon name="GraduationCap" className="text-white" size={24} />
+                <Icon name="Sparkles" className="text-white" size={24} />
               </div>
-              <span className="font-display text-xl font-bold text-white">EduSpace</span>
+              <span className="font-display text-xl font-bold text-white">ArtSpace Сочи</span>
             </div>
             <div className="text-center md:text-left">
-              <p>© 2024 EduSpace. Все права защищены.</p>
+              <p>© 2024 ArtSpace Сочи. Все права защищены.</p>
             </div>
             <div className="flex gap-4">
               <a href="#" className="hover:text-white transition-colors">
                 <Icon name="Facebook" size={20} />
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                <Icon name="Twitter" size={20} />
+                <Icon name="Instagram" size={20} />
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                <Icon name="Instagram" size={20} />
+                <Icon name="Youtube" size={20} />
               </a>
             </div>
           </div>
