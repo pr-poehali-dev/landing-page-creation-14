@@ -8,6 +8,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
   const { toast } = useToast();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -79,7 +80,7 @@ const Index = () => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-gold flex items-center justify-center">
               <Icon name="Sparkles" className="text-white" size={24} />
             </div>
-            <span className="font-display text-2xl font-bold bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
+            <span className="font-display text-xl md:text-2xl font-bold bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
               ArtSpace Сочи
             </span>
           </div>
@@ -91,10 +92,51 @@ const Index = () => {
               Забронировать
             </Button>
           </div>
+          <button 
+            className="md:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} className="text-orange" />
+          </button>
         </div>
       </nav>
 
-      <section id="home" className="pt-32 pb-20 px-6">
+      {mobileMenuOpen && (
+        <div className="fixed top-[73px] left-0 right-0 bg-white/95 backdrop-blur-md z-40 border-b border-border md:hidden animate-fade-in">
+          <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+            <a 
+              href="#home" 
+              className="text-base hover:text-orange transition-colors py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Главная
+            </a>
+            <a 
+              href="#reviews" 
+              className="text-base hover:text-orange transition-colors py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Отзывы
+            </a>
+            <a 
+              href="#contacts" 
+              className="text-base hover:text-orange transition-colors py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Контакты
+            </a>
+            <Button 
+              className="bg-gradient-to-r from-orange to-orange-light text-white w-full"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Забронировать
+            </Button>
+          </div>
+        </div>
+      )}
+
+      <section id="home" className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
@@ -103,7 +145,7 @@ const Index = () => {
                   ✨ Творческое пространство
                 </span>
               </div>
-              <h1 className="font-display text-6xl lg:text-7xl font-bold leading-tight">
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 Пространство
                 <br />
                 <span className="bg-gradient-to-r from-orange via-orange-light to-gold bg-clip-text text-transparent">
@@ -123,20 +165,20 @@ const Index = () => {
                   Расписание
                 </Button>
               </div>
-              <div className="flex items-center gap-8 pt-8">
+              <div className="flex items-center gap-4 sm:gap-8 pt-8 overflow-x-auto">
                 <div>
-                  <div className="font-display text-4xl font-bold text-orange">1200+</div>
-                  <div className="text-sm text-muted-foreground">Участников</div>
+                  <div className="font-display text-3xl sm:text-4xl font-bold text-orange whitespace-nowrap">1200+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">Участников</div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
                 <div>
-                  <div className="font-display text-4xl font-bold text-orange">50+</div>
-                  <div className="text-sm text-muted-foreground">Мероприятий</div>
+                  <div className="font-display text-3xl sm:text-4xl font-bold text-orange whitespace-nowrap">50+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">Мероприятий</div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
                 <div>
-                  <div className="font-display text-4xl font-bold text-orange">5</div>
-                  <div className="text-sm text-muted-foreground">Направлений</div>
+                  <div className="font-display text-3xl sm:text-4xl font-bold text-orange whitespace-nowrap">5</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">Направлений</div>
                 </div>
               </div>
             </div>
@@ -152,7 +194,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white/50">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 bg-white/50">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
@@ -172,20 +214,20 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-6">
+      <section id="reviews" className="py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <span className="px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-medium">
               ⭐ Отзывы
             </span>
-            <h2 className="font-display text-5xl font-bold mt-6 mb-4">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-6 mb-4">
               Что говорят наши
               <br />
               <span className="bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
                 участники
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Истории людей, которые раскрыли свой творческий потенциал в ArtSpace
             </p>
           </div>
@@ -222,19 +264,19 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-6 bg-gradient-to-br from-accent to-blue-dark text-white">
+      <section id="contacts" className="py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-accent to-blue-dark text-white">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
                 📬 Свяжитесь с нами
               </span>
-              <h2 className="font-display text-5xl font-bold mt-6 mb-6">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-6 mb-6">
                 Присоединяйтесь
                 <br />
                 к творческому сообществу
               </h2>
-              <p className="text-xl text-white/80 mb-8">
+              <p className="text-lg sm:text-xl text-white/80 mb-8">
                 Оставьте заявку на участие в мероприятиях или аренду пространства
               </p>
               
@@ -330,7 +372,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-12 px-6 bg-accent text-white/70">
+      <footer className="py-8 sm:py-12 px-4 sm:px-6 bg-accent text-white/70">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
