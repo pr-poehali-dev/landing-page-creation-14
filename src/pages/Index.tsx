@@ -75,14 +75,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-orange-50 to-gold/10 overflow-x-hidden w-full max-w-[100vw]">
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-border">
-        <div className="mx-auto px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-full">
+        <div className="mx-auto px-3 sm:px-6 py-2 sm:py-3 flex items-center justify-between w-full">
           <div className="flex items-center gap-2">
             <img 
               src="https://cdn.poehali.dev/files/56e896fd-1f8f-41ad-b751-189da9a5711a.png" 
               alt="Cinematique Logo" 
               className="w-10 h-10 object-contain"
             />
-            <span className="font-display text-xl sm:text-4xl md:text-5xl font-bold text-[#E17B55] whitespace-nowrap">
+            <span className="font-display text-xl sm:text-4xl md:text-5xl font-bold text-[#FF6B35] whitespace-nowrap">
               Cinematique
             </span>
           </div>
@@ -138,7 +138,7 @@ const Index = () => {
         </div>
       )}
 
-      <section id="home" className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-12 md:pb-20 px-3 sm:px-6">
+      <section id="home" className="pt-16 sm:pt-20 md:pt-24 pb-10 sm:pb-12 md:pb-20 px-3 sm:px-6">
         <div className="mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 sm:space-y-8 animate-fade-in">
