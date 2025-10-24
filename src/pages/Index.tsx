@@ -215,20 +215,14 @@ const Index = () => {
 
       <section id="reviews" className="py-6 sm:py-10 px-3 sm:px-6">
         <div className="mx-auto w-full">
-          <div className="text-center mb-10 sm:mb-16 animate-fade-in">
-            <span className="px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-medium">
-              ⭐ Отзывы
-            </span>
-            <h2 className="font-sans text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-4">
+          <div className="text-center mb-6 sm:mb-10 animate-fade-in">
+            <h2 className="font-sans text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
               Что говорят наши
               <br />
               <span className="bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
                 участники
               </span>
             </h2>
-            <p className="text-sm sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
-              Истории людей, которые раскрыли свой творческий потенциал в ArtSpace
-            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
