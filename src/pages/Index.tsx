@@ -4,12 +4,14 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
   const { toast } = useToast();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scheduleOpen, setScheduleOpen] = useState(false);
   const [formData, setFormData] = useState({
     event: '',
     name: '',
@@ -160,7 +162,12 @@ const Index = () => {
                   Забронировать место
                   <Icon name="ArrowRight" className="ml-2" size={18} />
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-orange text-orange hover:bg-orange hover:text-white w-full sm:w-auto text-sm sm:text-base">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-orange text-orange hover:bg-orange hover:text-white w-full sm:w-auto text-sm sm:text-base"
+                  onClick={() => setScheduleOpen(true)}
+                >
                   Расписание
                 </Button>
               </div>
@@ -393,6 +400,144 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <Dialog open={scheduleOpen} onOpenChange={setScheduleOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl sm:text-3xl font-bold text-center">Расписание занятий</DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-6 mt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Card className="p-4 border-2 border-orange/20">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
+                    <Icon name="Music" className="text-orange" size={24} />
+                  </div>
+                  <h3 className="font-bold text-lg">Танцы и музыка</h3>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between py-2 border-b">
+                    <span className="text-muted-foreground">Понедельник</span>
+                    <span className="font-semibold">18:00 - 20:00</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span className="text-muted-foreground">Среда</span>
+                    <span className="font-semibold">18:00 - 20:00</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span className="text-muted-foreground">Пятница</span>
+                    <span className="font-semibold">19:00 - 21:00</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-4 border-2 border-orange/20">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
+                    <Icon name="Film" className="text-orange" size={24} />
+                  </div>
+                  <h3 className="font-bold text-lg">Кино и актерство</h3>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between py-2 border-b">
+                    <span className="text-muted-foreground">Вторник</span>
+                    <span className="font-semibold">17:00 - 19:00</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span className="text-muted-foreground">Четверг</span>
+                    <span className="font-semibold">17:00 - 19:00</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span className="text-muted-foreground">Суббота</span>
+                    <span className="font-semibold">14:00 - 16:00</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-4 border-2 border-orange/20">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
+                    <Icon name="Mic" className="text-orange" size={24} />
+                  </div>
+                  <h3 className="font-bold text-lg">Ораторское мастерство</h3>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between py-2 border-b">
+                    <span className="text-muted-foreground">Среда</span>
+                    <span className="font-semibold">15:00 - 17:00</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span className="text-muted-foreground">Пятница</span>
+                    <span className="font-semibold">16:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span className="text-muted-foreground">Воскресенье</span>
+                    <span className="font-semibold">11:00 - 13:00</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-4 border-2 border-orange/20">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
+                    <Icon name="Users" className="text-orange" size={24} />
+                  </div>
+                  <h3 className="font-bold text-lg">Мастер-классы</h3>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between py-2 border-b">
+                    <span className="text-muted-foreground">Суббота</span>
+                    <span className="font-semibold">10:00 - 13:00</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span className="text-muted-foreground">Воскресенье</span>
+                    <span className="font-semibold">14:00 - 17:00</span>
+                  </div>
+                  <div className="text-muted-foreground py-2 italic">
+                    По предварительной записи
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            <div className="bg-orange/5 rounded-lg p-4 border border-orange/20">
+              <div className="flex items-start gap-3">
+                <Icon name="Info" className="text-orange flex-shrink-0 mt-1" size={20} />
+                <div className="text-sm">
+                  <p className="font-semibold mb-1">Важная информация:</p>
+                  <ul className="space-y-1 text-muted-foreground">
+                    <li>• Запись на занятия обязательна</li>
+                    <li>• Первое занятие бесплатно</li>
+                    <li>• При покупке абонемента - скидка 20%</li>
+                    <li>• Индивидуальные занятия по договоренности</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button 
+                className="flex-1 bg-gradient-to-r from-orange to-orange-light text-white"
+                onClick={() => {
+                  setScheduleOpen(false);
+                  document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Записаться на занятие
+                <Icon name="ArrowRight" className="ml-2" size={18} />
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-2 border-orange text-orange"
+                onClick={() => setScheduleOpen(false)}
+              >
+                Закрыть
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
