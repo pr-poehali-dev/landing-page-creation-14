@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
@@ -10,8 +11,8 @@ const Index = () => {
   const { toast } = useToast();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
+    event: '',
     name: '',
-    email: '',
     phone: '',
     message: ''
   });
@@ -22,7 +23,7 @@ const Index = () => {
       title: "Заявка отправлена!",
       description: "Мы свяжемся с вами в ближайшее время.",
     });
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setFormData({ event: '', name: '', phone: '', message: '' });
   };
 
   const testimonials = [
@@ -312,22 +313,25 @@ const Index = () => {
               </h3>
               <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                 <div>
+                  <label className="block text-sm font-medium mb-2 text-foreground">Выберите мероприятие</label>
+                  <Select value={formData.event} onValueChange={(value) => setFormData({...formData, event: value})} required>
+                    <SelectTrigger className="border-2 focus:border-orange">
+                      <SelectValue placeholder="Выберите направление" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="dance">Танцы и музыка</SelectItem>
+                      <SelectItem value="cinema">Кино и актерство</SelectItem>
+                      <SelectItem value="speaking">Ораторское мастерство</SelectItem>
+                      <SelectItem value="other">Другое</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
                   <label className="block text-sm font-medium mb-2 text-foreground">Ваше имя</label>
                   <Input 
                     placeholder="Иван Иванов"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    required
-                    className="border-2 focus:border-orange"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">Email</label>
-                  <Input 
-                    type="email"
-                    placeholder="ivan@example.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
                     required
                     className="border-2 focus:border-orange"
                   />
