@@ -158,7 +158,11 @@ const Index = () => {
                 Откройте свой талант в сердце Сочи.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
-                <Button size="lg" className="bg-gradient-to-r from-orange to-orange-light text-white hover:shadow-xl transition-all w-full sm:w-auto text-sm sm:text-base">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-orange to-orange-light text-white hover:shadow-xl transition-all w-full sm:w-auto text-sm sm:text-base"
+                  onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   Забронировать место
                   <Icon name="ArrowRight" className="ml-2" size={18} />
                 </Button>
