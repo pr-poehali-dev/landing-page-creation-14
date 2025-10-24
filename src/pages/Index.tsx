@@ -183,8 +183,8 @@ const Index = () => {
             <div className="relative animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-br from-orange/20 to-gold/20 rounded-3xl blur-3xl"></div>
               <img 
-                src="https://cdn.poehali.dev/projects/a8ab8840-9005-4973-8d02-ada3c440d9fd/files/869615ba-314c-42a6-b255-1bf19f1a9408.jpg"
-                alt="Creative Space"
+                src="https://cdn.poehali.dev/files/12575b84-76cd-46aa-9479-9c933be143d2.jpeg"
+                alt="Cinematique Space"
                 className="relative rounded-3xl shadow-2xl w-full animate-float"
               />
             </div>
