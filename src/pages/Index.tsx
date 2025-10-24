@@ -73,14 +73,14 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-orange-50 to-gold/10 overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-background via-orange-50 to-gold/10 overflow-x-hidden w-full max-w-[100vw]">
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-border">
-        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between max-w-full">
+        <div className="mx-auto px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-full">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-gold flex items-center justify-center">
               <Icon name="Sparkles" className="text-white" size={24} />
             </div>
-            <span className="font-display text-base sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent whitespace-nowrap">
+            <span className="font-display text-sm sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent whitespace-nowrap">
               ArtSpace Сочи
             </span>
           </div>
@@ -97,14 +97,14 @@ const Index = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={28} className="text-orange" />
+            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} className="text-orange" />
           </button>
         </div>
       </nav>
 
       {mobileMenuOpen && (
         <div className="fixed top-[57px] sm:top-[73px] left-0 right-0 bg-white/95 backdrop-blur-md z-40 border-b border-border md:hidden animate-fade-in shadow-lg">
-          <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 flex flex-col gap-3 sm:gap-4 max-w-full">
+          <div className="px-3 sm:px-6 py-4 sm:py-6 flex flex-col gap-3 sm:gap-4">
             <a 
               href="#home" 
               className="text-base hover:text-orange transition-colors py-2"
@@ -136,8 +136,8 @@ const Index = () => {
         </div>
       )}
 
-      <section id="home" className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-12 md:pb-20 px-4 sm:px-6">
-        <div className="container mx-auto max-w-full">
+      <section id="home" className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-12 md:pb-20 px-3 sm:px-6">
+        <div className="mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 sm:space-y-8 animate-fade-in">
               <div className="inline-block">
@@ -145,27 +145,27 @@ const Index = () => {
                   ✨ Творческое пространство
                 </span>
               </div>
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+              <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Пространство
                 <br />
                 <span className="bg-gradient-to-r from-orange via-orange-light to-gold bg-clip-text text-transparent">
                   для творчества
                 </span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Танцы, музыка, кино, актерское и ораторское мастерство, духовное развитие. 
                 Откройте свой талант в сердце Сочи.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-orange to-orange-light text-white hover:shadow-xl transition-all">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
+                <Button size="lg" className="bg-gradient-to-r from-orange to-orange-light text-white hover:shadow-xl transition-all w-full sm:w-auto text-sm sm:text-base">
                   Забронировать место
-                  <Icon name="ArrowRight" className="ml-2" size={20} />
+                  <Icon name="ArrowRight" className="ml-2" size={18} />
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-orange text-orange hover:bg-orange hover:text-white">
+                <Button size="lg" variant="outline" className="border-2 border-orange text-orange hover:bg-orange hover:text-white w-full sm:w-auto text-sm sm:text-base">
                   Расписание
                 </Button>
               </div>
-              <div className="flex items-center gap-3 sm:gap-6 lg:gap-8 pt-6 sm:pt-8">
+              <div className="flex items-center gap-2 sm:gap-6 lg:gap-8 pt-6 sm:pt-8">
                 <div>
                   <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">1200+</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Участников</div>
@@ -194,60 +194,60 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-12 sm:py-20 px-4 sm:px-6 bg-white/50">
-        <div className="container mx-auto max-w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <section className="py-12 sm:py-20 px-3 sm:px-6 bg-white/50">
+        <div className="mx-auto w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {features.map((feature, index) => (
               <Card 
                 key={index}
-                className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-orange/20 animate-fade-in"
+                className="p-4 sm:p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-orange/20 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange to-gold flex items-center justify-center mb-4">
                   <Icon name={feature.icon as any} className="text-white" size={28} />
                 </div>
-                <h3 className="font-display text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="font-display text-base sm:text-xl font-bold mb-2">{feature.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="reviews" className="py-12 sm:py-20 px-4 sm:px-6">
-        <div className="container mx-auto max-w-full">
+      <section id="reviews" className="py-12 sm:py-20 px-3 sm:px-6">
+        <div className="mx-auto w-full">
           <div className="text-center mb-10 sm:mb-16 animate-fade-in">
             <span className="px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-medium">
               ⭐ Отзывы
             </span>
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-4">
+            <h2 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-4">
               Что говорят наши
               <br />
               <span className="bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
                 участники
               </span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+            <p className="text-sm sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
               Истории людей, которые раскрыли свой творческий потенциал в ArtSpace
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index}
-                className="p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue/10 hover:border-orange/30 animate-fade-in"
+                className="p-4 sm:p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue/10 hover:border-orange/30 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-3 mb-4">
                   <img 
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-orange"
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-orange flex-shrink-0"
                   />
-                  <div>
-                    <h4 className="font-bold text-lg">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-sm sm:text-lg truncate">{testimonial.name}</h4>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </div>
                 <div className="flex gap-1 mb-4">
@@ -255,7 +255,7 @@ const Index = () => {
                     <Icon key={i} name="Star" className="text-gold fill-gold" size={16} />
                   ))}
                 </div>
-                <p className="text-muted-foreground leading-relaxed italic">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed italic">
                   "{testimonial.text}"
                 </p>
               </Card>
@@ -264,19 +264,19 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-accent to-blue-dark text-white">
-        <div className="container mx-auto max-w-full">
+      <section id="contacts" className="py-12 sm:py-20 px-3 sm:px-6 bg-gradient-to-br from-accent to-blue-dark text-white">
+        <div className="mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
               <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
                 📬 Свяжитесь с нами
               </span>
-              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6">
+              <h2 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6">
                 Присоединяйтесь
                 <br />
                 к творческому сообществу
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8">
+              <p className="text-sm sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8">
                 Оставьте заявку на участие в мероприятиях или аренду пространства
               </p>
               
@@ -312,7 +312,7 @@ const Index = () => {
             </div>
 
             <Card className="p-6 sm:p-8 bg-white animate-scale-in">
-              <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-foreground">
+              <h3 className="font-display text-lg sm:text-2xl font-bold mb-4 sm:mb-6 text-foreground">
                 Запись на мероприятие
               </h3>
               <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
@@ -372,14 +372,14 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 sm:py-12 px-4 sm:px-6 bg-accent text-white/70">
-        <div className="container mx-auto max-w-full">
+      <footer className="py-8 sm:py-12 px-3 sm:px-6 bg-accent text-white/70">
+        <div className="mx-auto w-full">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-gold flex items-center justify-center">
                 <Icon name="Sparkles" className="text-white" size={24} />
               </div>
-              <span className="font-display text-base sm:text-xl font-bold text-white whitespace-nowrap">ArtSpace Сочи</span>
+              <span className="font-display text-sm sm:text-xl font-bold text-white whitespace-nowrap">ArtSpace Сочи</span>
             </div>
             <div className="text-center md:text-left">
               <p className="text-xs sm:text-sm">© 2024 ArtSpace Сочи. Все права защищены.</p>
