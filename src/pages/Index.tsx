@@ -137,7 +137,7 @@ const Index = () => {
       )}
 
       <section id="home" className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-12 md:pb-20 px-4 sm:px-6">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 sm:space-y-8 animate-fade-in">
               <div className="inline-block">
@@ -145,7 +145,7 @@ const Index = () => {
                   ✨ Творческое пространство
                 </span>
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Пространство
                 <br />
                 <span className="bg-gradient-to-r from-orange via-orange-light to-gold bg-clip-text text-transparent">
@@ -165,20 +165,20 @@ const Index = () => {
                   Расписание
                 </Button>
               </div>
-              <div className="flex items-center gap-4 sm:gap-8 pt-8 overflow-x-auto">
+              <div className="flex items-center gap-3 sm:gap-6 lg:gap-8 pt-6 sm:pt-8">
                 <div>
-                  <div className="font-display text-3xl sm:text-4xl font-bold text-orange whitespace-nowrap">1200+</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">Участников</div>
+                  <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">1200+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Участников</div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
                 <div>
-                  <div className="font-display text-3xl sm:text-4xl font-bold text-orange whitespace-nowrap">50+</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">Мероприятий</div>
+                  <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">50+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Мероприятий</div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
                 <div>
-                  <div className="font-display text-3xl sm:text-4xl font-bold text-orange whitespace-nowrap">5</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">Направлений</div>
+                  <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">5</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Направлений</div>
                 </div>
               </div>
             </div>
@@ -195,7 +195,7 @@ const Index = () => {
       </section>
 
       <section className="py-12 sm:py-20 px-4 sm:px-6 bg-white/50">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <Card 
@@ -215,19 +215,19 @@ const Index = () => {
       </section>
 
       <section id="reviews" className="py-12 sm:py-20 px-4 sm:px-6">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-full">
           <div className="text-center mb-10 sm:mb-16 animate-fade-in">
             <span className="px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-medium">
               ⭐ Отзывы
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-6 mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-4">
               Что говорят наши
               <br />
               <span className="bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
                 участники
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Истории людей, которые раскрыли свой творческий потенциал в ArtSpace
             </p>
           </div>
@@ -265,47 +265,47 @@ const Index = () => {
       </section>
 
       <section id="contacts" className="py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-accent to-blue-dark text-white">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto max-w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
               <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
                 📬 Свяжитесь с нами
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-6 mb-6">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6">
                 Присоединяйтесь
                 <br />
                 к творческому сообществу
               </h2>
-              <p className="text-lg sm:text-xl text-white/80 mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8">
                 Оставьте заявку на участие в мероприятиях или аренду пространства
               </p>
               
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                    <Icon name="Mail" size={24} />
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                    <Icon name="Mail" size={20} />
                   </div>
-                  <div>
-                    <div className="font-semibold">Email</div>
-                    <div className="text-white/70">info@artspace-sochi.ru</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                    <Icon name="Phone" size={24} />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Телефон</div>
-                    <div className="text-white/70">+7 (495) 123-45-67</div>
+                  <div className="min-w-0">
+                    <div className="font-semibold text-sm sm:text-base">Email</div>
+                    <div className="text-white/70 text-xs sm:text-sm break-all">info@artspace-sochi.ru</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                    <Icon name="MapPin" size={24} />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                    <Icon name="Phone" size={20} />
                   </div>
-                  <div>
-                    <div className="font-semibold">Адрес</div>
-                    <div className="text-white/70">Сочи, Курортный проспект, 75</div>
+                  <div className="min-w-0">
+                    <div className="font-semibold text-sm sm:text-base">Телефон</div>
+                    <div className="text-white/70 text-xs sm:text-sm">+7 (495) 123-45-67</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                    <Icon name="MapPin" size={20} />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-semibold text-sm sm:text-base">Адрес</div>
+                    <div className="text-white/70 text-xs sm:text-sm">Сочи, Курортный проспект, 75</div>
                   </div>
                 </div>
               </div>
@@ -351,7 +351,7 @@ const Index = () => {
                 <div>
                   <label className="block text-sm font-medium mb-2 text-foreground">Сообщение</label>
                   <Textarea 
-                    placeholder="Какое направление вас интересует: танцы, музыка, кино, актерство или духовное развитие?"
+                    placeholder="Какое направление вас интересует?"
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     rows={4}
@@ -373,18 +373,18 @@ const Index = () => {
       </section>
 
       <footer className="py-8 sm:py-12 px-4 sm:px-6 bg-accent text-white/70">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="container mx-auto max-w-full">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-gold flex items-center justify-center">
                 <Icon name="Sparkles" className="text-white" size={24} />
               </div>
-              <span className="font-display text-xl font-bold text-white">ArtSpace Сочи</span>
+              <span className="font-display text-base sm:text-xl font-bold text-white whitespace-nowrap">ArtSpace Сочи</span>
             </div>
             <div className="text-center md:text-left">
-              <p>© 2024 ArtSpace Сочи. Все права защищены.</p>
+              <p className="text-xs sm:text-sm">© 2024 ArtSpace Сочи. Все права защищены.</p>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4 flex-shrink-0">
               <a href="#" className="hover:text-white transition-colors">
                 <Icon name="Facebook" size={20} />
               </a>
