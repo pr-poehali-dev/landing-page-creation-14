@@ -391,8 +391,10 @@ const Index = () => {
               <p className="text-xs sm:text-sm">© 2024 Cinematique. Все права защищены.</p>
             </div>
             <div className="flex gap-3 sm:gap-4 flex-shrink-0">
-              <a href="#" className="hover:text-white transition-colors">
-                <Icon name="Facebook" size={20} />
+              <a href="https://vk.com/club233478668" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.35 14.63h-1.4c-.68 0-.89-.54-2.1-1.76-1.05-1.03-1.52-1.17-1.78-1.17-.37 0-.47.1-.47.58v1.61c0 .44-.14.7-1.31.7-1.94 0-4.08-1.17-5.59-3.36-2.27-3.2-2.89-5.6-2.89-6.1 0-.26.1-.5.58-.5h1.4c.43 0 .6.2.76.66.85 2.42 2.28 4.54 2.87 4.54.22 0 .32-.1.32-.66V9.47c-.06-1.1-.65-1.2-.65-1.58 0-.21.17-.42.45-.42h2.2c.37 0 .5.2.5.63v3.42c0 .37.17.5.27.5.22 0 .4-.13.82-.54 1.26-1.42 2.16-3.6 2.16-3.6.12-.26.32-.5.75-.5h1.4c.5 0 .6.26.5.62-.17.95-2.02 3.86-2.02 3.86-.18.3-.25.44 0 .77.18.25.76.75 1.15 1.2.71.82 1.26 1.5 1.41 1.98.15.47-.08.71-.57.71z"/>
+                </svg>
               </a>
               <a href="#" className="hover:text-white transition-colors">
                 <Icon name="Instagram" size={20} />
