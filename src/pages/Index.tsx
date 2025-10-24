@@ -266,10 +266,7 @@ const Index = () => {
         <div className="mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
-              <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium">
-                📬 Свяжитесь с нами
-              </span>
-              <h2 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6">
+              <h2 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                 Присоединяйтесь
                 <br />
                 к творческому сообществу
@@ -279,22 +276,22 @@ const Index = () => {
               </p>
               
               <div className="space-y-4 sm:space-y-6">
-                <div className="flex items-center gap-3 sm:gap-4">
+                <a href="https://wa.me/79037072907" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 sm:gap-4 hover:opacity-80 transition-opacity">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                    <Icon name="Mail" size={20} />
+                    <Icon name="MessageCircle" size={20} />
                   </div>
                   <div className="min-w-0">
-                    <div className="font-semibold text-sm sm:text-base">Email</div>
-                    <div className="text-white/70 text-xs sm:text-sm break-all">info@artspace-sochi.ru</div>
+                    <div className="font-semibold text-sm sm:text-base">WhatsApp</div>
+                    <div className="text-white/70 text-xs sm:text-sm">+7 903 707-29-07</div>
                   </div>
-                </div>
+                </a>
                 <div className="flex items-center gap-3 sm:gap-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                     <Icon name="Phone" size={20} />
                   </div>
                   <div className="min-w-0">
                     <div className="font-semibold text-sm sm:text-base">Телефон</div>
-                    <div className="text-white/70 text-xs sm:text-sm">+7 (495) 123-45-67</div>
+                    <div className="text-white/70 text-xs sm:text-sm">+7 903 707-29-07</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 sm:gap-4">
@@ -303,7 +300,7 @@ const Index = () => {
                   </div>
                   <div className="min-w-0">
                     <div className="font-semibold text-sm sm:text-base">Адрес</div>
-                    <div className="text-white/70 text-xs sm:text-sm">Сочи, Курортный проспект, 75</div>
+                    <div className="text-white/70 text-xs sm:text-sm">Сочи, Курортный проспект, 84</div>
                   </div>
                 </div>
               </div>
