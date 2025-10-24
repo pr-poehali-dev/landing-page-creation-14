@@ -139,10 +139,10 @@ const Index = () => {
         </div>
       )}
 
-      <section id="home" className="pt-16 sm:pt-20 md:pt-24 pb-10 sm:pb-12 md:pb-20 px-3 sm:px-6">
+      <section id="home" className="pt-16 sm:pt-20 md:pt-24 pb-6 sm:pb-8 px-3 sm:px-6">
         <div className="mx-auto w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 sm:space-y-8 animate-fade-in">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+            <div className="space-y-4 sm:space-y-6 animate-fade-in">
 
               <h1 className="font-sans text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Пространство
@@ -193,7 +193,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-12 sm:py-20 px-3 sm:px-6 bg-white/50">
+      <section className="py-6 sm:py-10 px-3 sm:px-6 bg-white/50">
         <div className="mx-auto w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {features.map((feature, index) => (
@@ -213,7 +213,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-12 sm:py-20 px-3 sm:px-6">
+      <section id="reviews" className="py-6 sm:py-10 px-3 sm:px-6">
         <div className="mx-auto w-full">
           <div className="text-center mb-10 sm:mb-16 animate-fade-in">
             <span className="px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-medium">
@@ -263,7 +263,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-12 sm:py-20 px-3 sm:px-6 bg-gradient-to-br from-accent to-blue-dark text-white">
+      <section id="contacts" className="py-6 sm:py-10 px-3 sm:px-6 bg-gradient-to-br from-accent to-blue-dark text-white">
         <div className="mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
@@ -371,7 +371,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 sm:py-12 px-3 sm:px-6 bg-accent text-white/70">
+      <footer className="py-4 sm:py-6 px-3 sm:px-6 bg-accent text-white/70">
         <div className="mx-auto w-full">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
