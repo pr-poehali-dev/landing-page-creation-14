@@ -151,7 +151,7 @@ const Index = () => {
                 </span>
               </h1>
               <p className="text-sm sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Танцы, музыка, кино, актерское и ораторское мастерство, духовное развитие. 
+                Танцы, музыка, кино, актерское и ораторское мастерство. 
                 Откройте свой талант в сердце Сочи.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
