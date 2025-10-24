@@ -73,14 +73,14 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-orange-50 to-gold/10">
+    <div className="min-h-screen bg-gradient-to-br from-background via-orange-50 to-gold/10 overflow-x-hidden">
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-border">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between max-w-full">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-gold flex items-center justify-center">
               <Icon name="Sparkles" className="text-white" size={24} />
             </div>
-            <span className="font-display text-xl md:text-2xl font-bold bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent">
+            <span className="font-display text-base sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent whitespace-nowrap">
               ArtSpace Сочи
             </span>
           </div>
@@ -93,18 +93,18 @@ const Index = () => {
             </Button>
           </div>
           <button 
-            className="md:hidden p-2"
+            className="md:hidden p-1 sm:p-2 flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} className="text-orange" />
+            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={28} className="text-orange" />
           </button>
         </div>
       </nav>
 
       {mobileMenuOpen && (
-        <div className="fixed top-[73px] left-0 right-0 bg-white/95 backdrop-blur-md z-40 border-b border-border md:hidden animate-fade-in">
-          <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+        <div className="fixed top-[57px] sm:top-[73px] left-0 right-0 bg-white/95 backdrop-blur-md z-40 border-b border-border md:hidden animate-fade-in shadow-lg">
+          <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 flex flex-col gap-3 sm:gap-4 max-w-full">
             <a 
               href="#home" 
               className="text-base hover:text-orange transition-colors py-2"
@@ -136,10 +136,10 @@ const Index = () => {
         </div>
       )}
 
-      <section id="home" className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6">
+      <section id="home" className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-12 md:pb-20 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-6 sm:space-y-8 animate-fade-in">
               <div className="inline-block">
                 <span className="px-4 py-2 bg-orange/10 text-orange rounded-full text-sm font-medium">
                   ✨ Творческое пространство
@@ -152,7 +152,7 @@ const Index = () => {
                   для творчества
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Танцы, музыка, кино, актерское и ораторское мастерство, духовное развитие. 
                 Откройте свой талант в сердце Сочи.
               </p>
@@ -196,7 +196,7 @@ const Index = () => {
 
       <section className="py-12 sm:py-20 px-4 sm:px-6 bg-white/50">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <Card 
                 key={index}
@@ -216,7 +216,7 @@ const Index = () => {
 
       <section id="reviews" className="py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-10 sm:mb-16 animate-fade-in">
             <span className="px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-medium">
               ⭐ Отзывы
             </span>
@@ -232,11 +232,11 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index}
-                className="p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue/10 hover:border-orange/30 animate-fade-in"
+                className="p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue/10 hover:border-orange/30 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -311,11 +311,11 @@ const Index = () => {
               </div>
             </div>
 
-            <Card className="p-8 bg-white animate-scale-in">
-              <h3 className="font-display text-2xl font-bold mb-6 text-foreground">
+            <Card className="p-6 sm:p-8 bg-white animate-scale-in">
+              <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-foreground">
                 Запись на мероприятие
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-2 text-foreground">Ваше имя</label>
                   <Input 
