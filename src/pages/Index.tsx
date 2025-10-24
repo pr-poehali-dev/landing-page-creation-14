@@ -82,7 +82,7 @@ const Index = () => {
               alt="Cinematique Logo" 
               className="w-10 h-10 object-contain"
             />
-            <span className="font-display text-sm sm:text-xl md:text-2xl font-bold text-[#E17B55] whitespace-nowrap">
+            <span className="font-display text-base sm:text-2xl md:text-3xl font-bold text-[#E17B55] whitespace-nowrap">
               Cinematique
             </span>
           </div>
@@ -142,11 +142,7 @@ const Index = () => {
         <div className="mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 sm:space-y-8 animate-fade-in">
-              <div className="inline-block">
-                <span className="px-4 py-2 bg-orange/10 text-orange rounded-full text-sm font-medium">
-                  ✨ Творческое пространство
-                </span>
-              </div>
+
               <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Пространство
                 <br />
