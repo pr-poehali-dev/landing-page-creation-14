@@ -77,11 +77,13 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-border">
         <div className="mx-auto px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-full">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-gold flex items-center justify-center">
-              <Icon name="Sparkles" className="text-white" size={24} />
-            </div>
-            <span className="font-display text-sm sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-orange to-gold bg-clip-text text-transparent whitespace-nowrap">
-              ArtSpace Сочи
+            <img 
+              src="https://cdn.poehali.dev/files/56e896fd-1f8f-41ad-b751-189da9a5711a.png" 
+              alt="Cinematique Logo" 
+              className="w-10 h-10 object-contain"
+            />
+            <span className="font-display text-sm sm:text-xl md:text-2xl font-bold text-[#E17B55] whitespace-nowrap">
+              Cinematique
             </span>
           </div>
           <div className="hidden md:flex items-center gap-8">
@@ -376,13 +378,15 @@ const Index = () => {
         <div className="mx-auto w-full">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-gold flex items-center justify-center">
-                <Icon name="Sparkles" className="text-white" size={24} />
-              </div>
-              <span className="font-display text-sm sm:text-xl font-bold text-white whitespace-nowrap">ArtSpace Сочи</span>
+              <img 
+                src="https://cdn.poehali.dev/files/56e896fd-1f8f-41ad-b751-189da9a5711a.png" 
+                alt="Cinematique Logo" 
+                className="w-10 h-10 object-contain"
+              />
+              <span className="font-display text-sm sm:text-xl font-bold text-white whitespace-nowrap">Cinematique</span>
             </div>
             <div className="text-center md:text-left">
-              <p className="text-xs sm:text-sm">© 2024 ArtSpace Сочи. Все права защищены.</p>
+              <p className="text-xs sm:text-sm">© 2024 Cinematique. Все права защищены.</p>
             </div>
             <div className="flex gap-3 sm:gap-4 flex-shrink-0">
               <a href="#" className="hover:text-white transition-colors">
