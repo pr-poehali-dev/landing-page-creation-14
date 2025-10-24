@@ -163,19 +163,19 @@ const Index = () => {
                   Расписание
                 </Button>
               </div>
-              <div className="flex items-center gap-2 sm:gap-6 lg:gap-8 pt-6 sm:pt-8">
-                <div>
-                  <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">1200+</div>
+              <div className="flex items-center gap-2 sm:gap-6 lg:gap-8 pt-6 sm:pt-8 justify-center lg:justify-start">
+                <div className="text-center">
+                  <div className="font-sans text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">1200+</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Участников</div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
-                <div>
-                  <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">50+</div>
+                <div className="text-center">
+                  <div className="font-sans text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">50+</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Мероприятий</div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
-                <div>
-                  <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">5</div>
+                <div className="text-center">
+                  <div className="font-sans text-2xl sm:text-3xl lg:text-4xl font-bold text-orange">5</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Направлений</div>
                 </div>
               </div>
